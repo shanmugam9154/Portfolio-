@@ -1,61 +1,206 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Shanmugam | ML Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shanmugam | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #020617, #0f172a);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #38bdf8;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0 20px;
+      color: #cbd5f5;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 5px;
+      display: inline-block;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #38bdf8;
+      text-align: center;
+    }
+
+    .about p {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.05rem;
+      color: #d1d5db;
+    }
+
+    .skills-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #1e293b;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #cbd5f5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    footer a {
+      margin: 0 10px;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
+  <!-- HERO -->
+  <header>
     <h1>Shanmugam</h1>
-    <p>Machine Learning Enthusiast | B.Tech Student</p>
-</header>
+    <p>Machine Learning & Web Developer | B.Tech Student</p>
+    <a class="btn" href="#projects">View Projects</a>
+    <a class="btn" href="#contact">Contact Me</a>
+  </header>
 
-<section>
+  <!-- ABOUT -->
+  <section class="about" id="about">
     <h2>About Me</h2>
     <p>
-        I am a B.Tech student passionate about Machine Learning and AI.
-        I enjoy building data-driven projects and continuously improving my skills.
+      I am a B.Tech student passionate about Artificial intelligence, Machine Learning, Web Development, and problem-solving.
+      I enjoy building real-world projects using Python, ML models, and modern web technologies.
+      My goal is to secure an internship where I can apply my skills, learn from industry professionals,
+      and contribute to impactful products.
     </p>
-</section>
+  </section>
 
-<section>
+  <!-- SKILLS -->
+  <section id="skills">
     <h2>Skills</h2>
-    <div class="skills">
-        <span>Python</span>
-        <span>Machine Learning</span>
-        <span>Pandas</span>
-        <span>Scikit-learn</span>
-        <span>Data Analysis</span>
+    <div class="skills-grid">
+      <div class="card">
+        <h3>Programming</h3>
+        <p>Python, C, Java (Basics)</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, Flask</p>
+      </div>
+      <div class="card">
+        <h3>Machine Learning</h3>
+        <p>Pandas, NumPy, scikit-learn, Data Preprocessing</p>
+      </div>
+      <div class="card">
+        <h3>Tools</h3>
+        <p>Git, GitHub, VS Code, Google Colab,kaggle ,jupyter</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<section>
+  <!-- PROJECTS -->
+  <section id="projects">
     <h2>Projects</h2>
+    <div class="projects-grid">
 
-    <div class="project">
+      <div class="card">
         <h3>House Price Prediction</h3>
-        <p>ML model to predict house prices based on property features.</p>
-        <a href="https://shanmugam9154.github.io/House-price-prediction-/" target="_blank">Live Demo</a>
-        <a href="https://github.com/shanmugam9154/House-price-prediction-" target="_blank">GitHub</a>
-    </div>
+        <p>
+          Built a Machine Learning regression model to predict house prices using real-world datasets.
+          Performed data cleaning, feature engineering, and model evaluation.
+        </p>
+        <p><strong>Tech:</strong> Python, Pandas, scikit-learn</p>
+      </div>
 
-    <div class="project">
-        <h3>AI Crops Predictor</h3>
-        <p>Predicts the best crop based on soil and climate conditions.</p>
-        <a href="https://shanmugam9154.github.io/AI-Crops-Predictor-/" target="_blank">Live Demo</a>
-        <a href="https://github.com/shanmugam9154/AI-Crops-Predictor-" target="_blank">GitHub</a>
-    </div>
-</section>
+      <div class="card">
+        <h3>AI Crop Recommendation System</h3>
+        <p>
+          Developed an ML-based system that suggests suitable crops based on soil and climate parameters.
+          Integrated the model with a web interface.
+        </p>
+        <p><strong>Tech:</strong> Python, Flask, ML</p>
+      </div>
 
-<footer>
-    <p>© 2026 Shanmugam | GitHub Portfolio</p>
-</footer>
+      <div class="card">
+        <h3>Task Scheduler Web App</h3>
+        <p>
+          Created a web application to schedule and manage daily tasks with CRUD operations.
+        </p>
+        <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">
+      📧 Email: <a href="mailto:shanmugam9154@gmail.com">shanmugam9154@gmail.com</a><br><br>
+      🔗 GitHub: <a href="https://github.com/shanmugam9154" target="_blank">github.com/shanmugam9154</a><br><br>
+      🔗 LinkedIn: <a href="#" target="_blank">Add your LinkedIn</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Shanmugam | Internship Portfolio</p>
+  </footer>
 
 </body>
-</html>
+    </html>
